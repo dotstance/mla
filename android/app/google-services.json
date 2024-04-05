@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "265862988005",
+    "project_id": "forefront-ca776",
+    "storage_bucket": "forefront-ca776.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265862988005:android:982a8d4838dc5156d4940c",
+        "android_client_info": {
+          "package_name": "com.example.mla"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgdSksj7dXAU9Uzo2J2AGlBS76izbg_6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
