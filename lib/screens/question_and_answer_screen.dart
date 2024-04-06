@@ -97,7 +97,7 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             height: size.height / 16,
                             decoration: BoxDecoration(
                                 border:
-                                    Border.all(width: 2, color: Colors.black),
+                                Border.all(width: 2, color: Colors.black),
                                 borderRadius: BorderRadius.circular(25)),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
@@ -200,7 +200,7 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             width: size.width,
                             height: size.height,
                             // color: Colors.lime,
-                           /* child: Stack(
+                            /* child: Stack(
                               alignment: Alignment.center,
                               children: [
                                 Container(
@@ -285,8 +285,8 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color:Colors.black,
-                                                borderRadius: BorderRadius.circular(18)
+                                                  color:Colors.black,
+                                                  borderRadius: BorderRadius.circular(18)
                                               ),
                                               child: Padding(
                                                 padding: const EdgeInsets.all(8.0),
@@ -305,7 +305,6 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                                               width: 50,
                                               height: 50,
                                             ),
-
                                           ],
                                         ),
                                         Row(
@@ -422,11 +421,9 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                       children: [
                         Row(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 18, color: Colors.black),
-                                  borderRadius: BorderRadius.circular(25)),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundImage: NetworkImage("https://th.bing.com/th/id/OIP.hCfHyL8u8XAbreXuaiTMQgHaHZ?w=207&h=206&c=7&r=0&o=5&pid=1.7"),
                             ),
                             SizedBox(
                               width: 12,
@@ -444,18 +441,16 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                               fontWeight: FontWeight.w500,
                             )),
                         Text(
-                            "Lorem Ipsum is simply dummy text of the printig pesetting industry.",
+                            "The BJP's influence varies across different states in India. A decline in the BJP's fortunes could have varying impacts at the state level, potentially leading to changes in regional politics and governance structures.",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             )),
                         Row(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 18, color: Colors.black),
-                                  borderRadius: BorderRadius.circular(25)),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundImage: NetworkImage("https://th.bing.com/th/id/OIP.WHWPRzfbMH4pdOc9DraUNgHaHa?w=169&h=180&c=7&r=0&o=5&pid=1.7"),
                             ),
                             SizedBox(
                               width: 12,
@@ -470,12 +465,12 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             Container(
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(width: 2, color: Colors.black),
+                                  Border.all(width: 2, color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                 child: Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 8, right: 8),
+                                  const EdgeInsets.only(left: 8, right: 8),
                                   child: Text("Yes",
                                       style: TextStyle(
                                         fontSize: 16,
@@ -490,7 +485,7 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             Container(
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(width: 2, color: Colors.black),
+                                  Border.all(width: 2, color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                 child: Padding(
@@ -549,40 +544,36 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                       children: [
                         Row(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 18, color: Colors.black),
-                                  borderRadius: BorderRadius.circular(25)),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundImage: NetworkImage("https://th.bing.com/th/id/OIP.0E145qm-Fzl6vKoqsFUZSAHaHa?w=185&h=185&c=7&r=0&o=5&pid=1.7"),
                             ),
                             SizedBox(
                               width: 12,
                             ),
-                            Text("Narayan Reddy",
+                            Text("Rajesh Kumar",
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w300,
                                 ))
                           ],
                         ),
-                        Text("What happens if BJP fails out?",
+                        Text("Do you think Telangana needs another regional party?",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                             )),
                         Text(
-                            "Lorem Ipsum is simply dummy text of the printig pesetting industry.",
+                            "Not a regional party, but YES, we need an alternate.Not having an alternate is too dangerous on a long run. No opposition would make the ruling party go on a dictator mode and leads way to agitation. Loot becomes but natural. Havoc is a daily scene. Development hardly happens. Goons everywhere. Security is forgotten.",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             )),
                         Row(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 18, color: Colors.black),
-                                  borderRadius: BorderRadius.circular(25)),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundImage: NetworkImage("https://th.bing.com/th/id/OIP.sKncjwtyVgGKNW4CXKB3NQHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7"),
                             ),
                             SizedBox(
                               width: 12,
@@ -597,12 +588,12 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             Container(
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(width: 2, color: Colors.black),
+                                  Border.all(width: 2, color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                 child: Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 8, right: 8),
+                                  const EdgeInsets.only(left: 8, right: 8),
                                   child: Text("Yes",
                                       style: TextStyle(
                                         fontSize: 16,
@@ -617,7 +608,7 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             Container(
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(width: 2, color: Colors.black),
+                                  Border.all(width: 2, color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                 child: Padding(
@@ -672,40 +663,36 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                       children: [
                         Row(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 18, color: Colors.black),
-                                  borderRadius: BorderRadius.circular(25)),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundImage: NetworkImage("https://th.bing.com/th/id/OIP.1aDDK3nqW9uqEdGWo8TNOgAAAA?w=178&h=180&c=7&r=0&o=5&pid=1.7"),
                             ),
                             SizedBox(
                               width: 12,
                             ),
-                            Text("Narayan Reddy",
+                            Text("Savitha Kumari",
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w300,
                                 ))
                           ],
                         ),
-                        Text("What happens if BJP fails out?",
+                        Text("How and why did the Congress Party win the Telangana election?",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                             )),
                         Text(
-                            "Lorem Ipsum is simply dummy text of the printig pesetting industry.",
+                            "It was assumed KCR would have a hat trick this time, and win easily. With both the Opposition parties(BJP, Congress) preoccupied with their own infighting, it seemed another win for granted. But beyond all the gushing PR, the drone shots of glass and steel buildings in Hyderabad, flyovers, things were not as rosy.",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             )),
                         Row(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 18, color: Colors.black),
-                                  borderRadius: BorderRadius.circular(25)),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundImage: NetworkImage("https://th.bing.com/th/id/OIF.Z98hcWFx9WyLactdW0JPhQ?w=173&h=180&c=7&r=0&o=5&pid=1.7"),
                             ),
                             SizedBox(
                               width: 12,
@@ -720,12 +707,12 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             Container(
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(width: 2, color: Colors.black),
+                                  Border.all(width: 2, color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                 child: Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 8, right: 8),
+                                  const EdgeInsets.only(left: 8, right: 8),
                                   child: Text("Yes",
                                       style: TextStyle(
                                         fontSize: 16,
@@ -740,7 +727,7 @@ class _QuestionAndAnswerScreenState extends State<QuestionAndAnswerScreen> {
                             Container(
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(width: 2, color: Colors.black),
+                                  Border.all(width: 2, color: Colors.black),
                                   borderRadius: BorderRadius.circular(5)),
                               child: Center(
                                 child: Padding(

@@ -96,20 +96,20 @@ class _YsrCpHomePageState extends State<YsrCpHomePage> {
                         child: YoutubeVideo(
                             "https://www.youtube.com/watch?v=Ne7Do0-HNzY"),
                       ),
-                      Align(
-                        alignment: Alignment.bottomLeft,
-                        child: Container(
-                          margin: EdgeInsets.only(left: 38, bottom: 132),
-                          width: 150,
-                          height: 100,
-                          decoration: BoxDecoration(
-                              // color: Colors.red,
-                              borderRadius: BorderRadius.circular(100)),
-                          child: _controller.value.isInitialized
-                              ? VideoPlayer(_controller)
-                              : Container(),
-                        ),
-                      ),
+                      // Align(
+                      //   alignment: Alignment.bottomLeft,
+                      //   child: Container(
+                      //     margin: EdgeInsets.only(left: 38, bottom: 132),
+                      //     width: 150,
+                      //     height: 100,
+                      //     decoration: BoxDecoration(
+                      //         // color: Colors.red,
+                      //         borderRadius: BorderRadius.circular(100)),
+                      //     child: _controller.value.isInitialized
+                      //         ? VideoPlayer(_controller)
+                      //         : Container(),
+                      //   ),
+                      // ),
                       Align(
                         alignment: Alignment.centerRight,
                         child: O3D(
@@ -167,7 +167,7 @@ class _YsrCpHomePageState extends State<YsrCpHomePage> {
                                       // height: 200,
                                       decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(10),
+                                          BorderRadius.circular(10),
                                           color: Colors.white,
                                           boxShadow: [
                                             new BoxShadow(
@@ -178,7 +178,7 @@ class _YsrCpHomePageState extends State<YsrCpHomePage> {
                                           ]),
                                       child: Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                         children: [
                                           Image.asset(
                                             "${YsrOpponentsList[index]["image"]}",
@@ -271,8 +271,49 @@ class _YsrCpHomePageState extends State<YsrCpHomePage> {
                           ),
                         ],
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+                      ),
+                      InkWell(
+                        onTap: (){
+                          Get.to(RegisterCompleant());
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: size.width,
+                            height: size.height / 18,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(22.5),
+                              color: Colors.black,
+                            ),
+                            child: Center(
+                              child: Text("Register a Complaint",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                  )),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text("Manifesto",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              )),
+                        ),
+                      ),
+                      Image.asset("assets/manifest.png"),
                       SizedBox(
-                        height: 42,
+                        height: 82,
                       )
                     ],
                   ),
@@ -291,6 +332,389 @@ class _YsrCpHomePageState extends State<YsrCpHomePage> {
         //   },
         //   child: Icon(Icons.play_arrow),
         // ),
+      ),
+    );
+  }
+  void modalBottomSheetMenu(BuildContext context){
+    var size = MediaQuery.of(context).size;
+    var lanuageList = [
+      "Telugu",
+      "Hindi",
+      "English",
+    ];
+    var selectedLanguage = 0;
+
+    showModalBottomSheet(
+        context: context,
+        builder: (builder){
+          return new Container(
+            height: 1500.0,
+            color: Colors.transparent, //could change this to Color(0xFF737373),
+            //so you don't have to change MaterialApp canvasColor
+            child: new Container(
+                decoration: new BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: new BorderRadius.only(
+                        topLeft: const Radius.circular(10.0),
+                        topRight: const Radius.circular(10.0))),
+                child: new Center(
+                  child: SingleChildScrollView(
+                    child: new Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(height: 22,),
+                        Text("Register Complaint",style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500
+                        ),),
+                        SizedBox(height: 12,),
+                        Container(
+                          width: size.width / 1.1,
+                          height: size.height / 14,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 2),
+                            child: TextFormField(
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter Name';
+                                }
+                                return null;
+                              },
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  border: InputBorder.none,
+                                  hintText: "Name"),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 12,),
+                        Container(
+                          width: size.width / 1.1,
+                          height: size.height / 14,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 2),
+                            child: TextFormField(
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter Mobile Number';
+                                }
+                                return null;
+                              },
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  border: InputBorder.none,
+                                  hintText: "Mobile Number"),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 12,),
+                        Container(
+                          width: size.width / 1.1,
+                          height: size.height / 14,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 2),
+                            child: TextFormField(
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter Age';
+                                }
+                                return null;
+                              },
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  border: InputBorder.none,
+                                  hintText: "Age"),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 12,),
+                        Container(
+                          width: size.width / 1.1,
+                          height: size.height / 14,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 2),
+                            child: TextFormField(
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter Location';
+                                }
+                                return null;
+                              },
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  border: InputBorder.none,
+                                  hintText: "Location"),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 12,),
+                        Container(
+                          width: size.width / 1.1,
+                          height: size.height / 14,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 2),
+                            child: TextFormField(
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Brief about issue';
+                                }
+                                return null;
+                              },
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  border: InputBorder.none,
+                                  hintText: "Brief about issue"),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 12,),
+                        Container(
+                          width: size.width / 1.1,
+                          height: size.height / 15,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(22.5),
+                            color: Colors.black,),
+                          child: Center(
+                            child: Text("Submit",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                )),
+                          ),
+                        ),
+                        SizedBox(height: 12,),
+                      ],
+                    ),
+                  ),
+                )),
+          );
+        }
+    );
+  }
+}
+
+class RegisterCompleant extends StatelessWidget {
+  const RegisterCompleant({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var size= MediaQuery.of(context).size;
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text("Register Complaint",style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w500
+          ),),
+        ),
+        body: Container(
+          height: 1500.0,
+          color: Colors.transparent, //could change this to Color(0xFF737373),
+          //so you don't have to change MaterialApp canvasColor
+          child: new Container(
+              decoration: new BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(10.0),
+                      topRight: const Radius.circular(10.0))),
+              child: new Center(
+                child: new Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+
+                    Container(
+                      width: size.width / 1.1,
+                      height: size.height / 14,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 2),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter Name';
+                            }
+                            return null;
+                          },
+                          decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              border: InputBorder.none,
+                              hintText: "Name"),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 12,),
+                    Container(
+                      width: size.width / 1.1,
+                      height: size.height / 14,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 2),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter Mobile Number';
+                            }
+                            return null;
+                          },
+                          decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              border: InputBorder.none,
+                              hintText: "Mobile Number"),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 12,),
+                    Container(
+                      width: size.width / 1.1,
+                      height: size.height / 14,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 2),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter Age';
+                            }
+                            return null;
+                          },
+                          decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              border: InputBorder.none,
+                              hintText: "Age"),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 12,),
+                    Container(
+                      width: size.width / 1.1,
+                      height: size.height / 14,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 2),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter Location';
+                            }
+                            return null;
+                          },
+                          decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              border: InputBorder.none,
+                              hintText: "Location"),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 12,),
+                    Container(
+                      width: size.width / 1.1,
+                      height: size.height / 14,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 2),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Brief about issue';
+                            }
+                            return null;
+                          },
+                          decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              border: InputBorder.none,
+                              hintText: "Brief about issue"),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 12,),
+                    Spacer(),
+                    Container(
+                      width: size.width / 1.1,
+                      height: size.height / 15,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(22.5),
+                        color: Colors.black,),
+                      child: Center(
+                        child: Text("Submit",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                            )),
+                      ),
+                    ),
+                    SizedBox(height: 12,),
+                  ],
+                ),
+              )),
+        ),
       ),
     );
   }

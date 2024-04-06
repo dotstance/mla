@@ -344,6 +344,48 @@ class _MlaHomeScreenState extends State<MlaHomeScreen> {
                               )
                             ],
                           ),
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.all(18.0),
+                              child: Row(
+                                children: [
+                                  InkWell(
+                                    onTap: (){
+                                      Get.to(QuestionAndAnswerScreen(
+                                          "${widget.modelUrl}",
+                                          "${mlaController.slectedMlaName.value}",
+                                          "${mlaController.slectedMlaImage.value}"
+                                      ));
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          color:Colors.black,
+                                          borderRadius: BorderRadius.circular(18)
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                            "Why To Vote?",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w700,
+                                            )
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Image.asset(
+                                    "assets/videoicon.png",
+                                    width: 50,
+                                    height: 50,
+                                  ),
+
+                                ],
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -380,45 +422,7 @@ class _MlaHomeScreenState extends State<MlaHomeScreen> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: (){
-                        Get.to(QuestionAndAnswerScreen(
-                                      "${widget.modelUrl}",
-                                      "${mlaController.slectedMlaName.value}",
-                                      "${mlaController.slectedMlaImage.value}"
-                                  ));
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color:Colors.black,
-                            borderRadius: BorderRadius.circular(18)
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                              "Why To Vote?",
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
-                              )
-                          ),
-                        ),
-                      ),
-                    ),
-                    Image.asset(
-                      "assets/videoicon.png",
-                      width: 50,
-                      height: 50,
-                    ),
 
-                  ],
-                ),
-              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Align(
@@ -443,7 +447,7 @@ class _MlaHomeScreenState extends State<MlaHomeScreen> {
                       // color: Colors.grey,
                       child: ListView.builder(
                           itemCount:
-                              mlaController.selectedOpponentList.value.length,
+                          mlaController.selectedOpponentList.value.length,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
                             return Padding(
@@ -459,13 +463,13 @@ class _MlaHomeScreenState extends State<MlaHomeScreen> {
                                         boxShadow: [
                                           new BoxShadow(
                                               color:
-                                                  Colors.grey.withOpacity(0.5),
+                                              Colors.grey.withOpacity(0.5),
                                               blurRadius: 2.0,
                                               spreadRadius: 3.0),
                                         ]),
                                     child: Column(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      CrossAxisAlignment.center,
                                       children: [
                                         Image.network(
                                           "${mlaController.selectedOpponentList.value[index].opponentMlaImage}",
@@ -587,7 +591,7 @@ class _MlaHomeScreenState extends State<MlaHomeScreen> {
                                       // color: Colors.grey,
                                       child: Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                         children: [
                                           Text(
                                               "${double.parse("${mlaController.allMlaList[index].percentageToWin}") * 100}%",
@@ -603,7 +607,7 @@ class _MlaHomeScreenState extends State<MlaHomeScreen> {
                                             center: CircleAvatar(
                                               radius: 55,
                                               backgroundColor:
-                                                  Colors.transparent,
+                                              Colors.transparent,
                                               child: Padding(
                                                 padding: const EdgeInsets.all(
                                                     5), // Border radius

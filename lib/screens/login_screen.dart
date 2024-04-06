@@ -217,10 +217,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           // Get.to(MlaViewScreen());
                           mlaController.getAllMlaList();
                           mlaController.getMlaData(
-                              "${mlaController.allMlaList[1].mlaName}",
-                              "${mlaController.allMlaList[1].manifesto}",
-                              mlaController
-                                  .allMlaList[1].opponentsMLAs!,"${mlaController.allMlaList[1].mlaImageUrl}",);
+                            "KALVAKUNTLA CHANDRASHEKHAR RAO",
+                            "${mlaController.allMlaList[1].manifesto}",
+                            mlaController
+                                .allMlaList[1].opponentsMLAs!,"https://upload.wikimedia.org/wikipedia/commons/3/3f/Kalvakuntla_Chandrashekar_Rao.png",);
                           // Navigator.push(
                           //   context,
                           //   MaterialPageRoute(

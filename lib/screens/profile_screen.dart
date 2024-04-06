@@ -268,6 +268,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       children: [
                         Text(
                             "${widget.mlaName}",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
